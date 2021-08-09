@@ -2,7 +2,7 @@
 
 API that can classify Image data into truck or ship
 
-## Machine Learning **[Python Notebook](https://github.com/nandakishormpai2001/ship_or_truck_api/blob/model/ship_or_truck_api.ipynb)**
+#### Machine Learning **[Python Notebook](https://github.com/nandakishormpai2001/ship_or_truck_api/blob/model/ship_or_truck_api.ipynb)**
 
 ## Machine Learning Model
 
@@ -18,7 +18,7 @@ Upload the **[Python notebook](https://github.com/nandakishormpai2001/ship_or_tr
 
 #### How It Works
 
-The input image dataset is converted to tensor and is passed through a CNN model, returning an output as truck(0) or ship(1). Input image tensor is passed through two convolutional layers and then flattened and inputted to fully connected layers.
+The input image dataset is converted to tensor and is passed through a CNN model, returning an output as ship(0) or truck(1). Input image tensor is passed through two convolutional layers and then flattened and inputted to fully connected layers.
 
 ## API
 
@@ -50,4 +50,4 @@ Output
 
 ## Thanks for reading the documentation
 
-Report any issues if found \*\*[here](https://github.com/nandakishormpai2001/ship_or_truck_api/issues)
+Report any issues if found [here](https://github.com/nandakishormpai2001/ship_or_truck_api/issues)
