@@ -10,7 +10,12 @@ Binary Image classifier Built on PyTorch framework using CNN architecture. Curre
 
 - Framework : PyTorch ( Version: 1.8.0+cpu )
 - Architecture : Convolutional Neural Networks
-- Validation Accuracy : 91.8%
+- Validation Accuracy : 93.55%
+
+
+![Validation Loss](https://github.com/nandakishormpai2001/ship_or_truck_api/raw/main/model/val_loss.png)
+
+Model generated at the 10th (9) epoch was chosen as it performs well in terms of accuracy and loss compared to others and is used in production.
 
 #### How to train
 
@@ -37,7 +42,7 @@ User has to send a POST request to the given api with Base64 string of the Image
 ```python
 import requests
 url = "https://ship-or-truck-api.herokuapp.com/"
-#imgdata should be the base64 string of image
+# imgdata should be the base64 string of the image
 r = requests.post(url,json = {"image":imgdata})
 print(r.text.strip())
 ```
