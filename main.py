@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from torch.functional import split
-from model_files.ml_predict import predict_plant, Network
+from model_files.ml_predict import predict_vehicle, Network
 import base64
 from decouple import config
 
@@ -16,7 +16,7 @@ def predict():
     image = key_dict["image"]
     imgdata = base64.b64decode(image)
     model = Network()
-    vehicle = predict_plant(model, imgdata)
+    vehicle = predict_vehicle(model, imgdata)
     response = {
         "result": vehicle,
     }

@@ -18,8 +18,6 @@ class Network(nn.Module):
         # CNNs for rgb images
         self.conv1 = nn.Conv2d(in_channels=3, out_channels=6, kernel_size=5)
         self.conv2 = nn.Conv2d(in_channels=6, out_channels=12, kernel_size=5)
-        self.conv3 = nn.Conv2d(in_channels=12, out_channels=24, kernel_size=5)
-        self.conv4 = nn.Conv2d(in_channels=24, out_channels=48, kernel_size=5)
 
         # Connecting CNN outputs with Fully Connected layers
         self.fc1 = nn.Linear(in_features=12*5*5, out_features=120)
@@ -52,7 +50,7 @@ class Network(nn.Module):
 
 # to avoid gradients update
 @torch.no_grad()
-def predict_plant(model, imgdata):
+def predict_vehicle(model, imgdata):
     with open('model_files/labels.json', 'rb') as lb:
         labels = pickle.load(lb)
 
