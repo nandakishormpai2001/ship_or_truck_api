@@ -6,7 +6,7 @@ import base64
 from decouple import config
 
 
-app = Flask("manglish_lyrics_generation")
+app = Flask("ship_or_truck_api")
 CORS(app)
 
 
