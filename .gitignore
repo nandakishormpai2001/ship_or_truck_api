@@ -6,4 +6,5 @@ src/
 src/
 venv/
 __pycache__/
+.ipynb_checkpoints/
 >>>>>>> 194237849fa78b2521495d2396f47427565c7924
