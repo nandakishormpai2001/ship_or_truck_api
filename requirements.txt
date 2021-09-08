@@ -10,3 +10,4 @@ gunicorn
 flask-cors
 pyfcm
 python-decouple
+opencv-python==4.5.3.56

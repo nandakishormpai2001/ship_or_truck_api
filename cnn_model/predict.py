@@ -50,15 +50,13 @@ class Network(nn.Module):
 
 # to avoid gradients update
 @torch.no_grad()
-def predict_vehicle(model, imgdata):
-    with open('model_files/labels.json', 'rb') as lb:
+def predict_vehicle(model, image):
+    with open('cnn_model/labels.json', 'rb') as lb:
         labels = pickle.load(lb)
 
     loaded_model = model
-    loaded_model.load_state_dict(torch.load("model_files/model.pth"))
+    loaded_model.load_state_dict(torch.load("cnn_model/model.pth"))
     loaded_model.eval()
-
-    image = Image.open(io.BytesIO(imgdata))
     resize = transforms.Compose([transforms.Resize((32, 32))])
     image = ToTensor()(image)
     y_result = model(resize(image).unsqueeze(0))
