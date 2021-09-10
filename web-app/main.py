@@ -20,20 +20,6 @@ def home_page():
     return render_template('main.html')
 
 
-@app.route('/', methods=['POST'])
-def main():
-    key_dict = request.get_json()
-    image = key_dict["image"]
-    imgdata = base64.b64decode(image)
-    model = Network()
-    vehicle = predict_vehicle(model, imgdata)
-    response = {
-        "result": vehicle,
-    }
-    response = jsonify(response)
-    return response
-
-
 @app.route("/predict", methods=['GET', 'POST'])
 def predict():
     if request.method == 'POST':
