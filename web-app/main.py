@@ -27,7 +27,6 @@ def predict():
         basepath = os.path.dirname(__file__)
         file_path = os.path.join(
             basepath, 'uploads', secure_filename(file.filename))
-        print("\n\nFile Path\n\n")
         file.save(file_path)
 
         image = Image.open(file_path)
